@@ -1,0 +1,34 @@
+/control/verbose 2
+/run/verbose 2
+
+# /testhadr/det/setMat Meteorite
+# /testhadr/det/setRadius 250 m
+
+# /testhadr/phys/thermalScattering false	# Default true
+
+# /run/numberOfThreads 1					# In the main program the maximum available threads are set
+/run/initialize
+
+/analysis/setFileName Bennu_M660_flux10-3
+/analysis/h1/set 0	44	0	11 m #Al26
+/analysis/h1/set 1	44	0	11 m #Mn54
+/analysis/h1/set 2	44	0	11 m #Co57
+/analysis/h1/set 3	44	0	11 m #Na22
+/analysis/h1/set 4	44	0	11 m #Co60
+/analysis/h1/set 5	44	0	11 m #Na22
+
+# GeneralParticleSource
+# I want to create a sphere around the meteorite that generates isotropically particles in the direction
+/gps/verbose 0
+/gps/particle alpha
+/gps/pos/type Surface
+/gps/pos/shape Sphere
+/gps/pos/radius 482 m
+/gps/ang/type cos
+/gps/ang/maxtheta 30 deg
+
+# Energy macro
+/control/execute energy_M660_alpha.mac
+
+/run/printProgress 100
+/run/beamOn 5208
