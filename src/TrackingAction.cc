@@ -39,8 +39,8 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   G4double posRadius;                                                     //particle position r
   G4double depth;                                                         //particle radial depth
 
-  G4double meteoriteRadius = 241*m;	                                  //meteorite radius
-  G4double histogramX = 8*m;                                             //histogram X axis
+  G4double meteoriteRadius = 241*m;	                                      //meteorite radius
+  G4double histogramX = 8*m;                                              //histogram X axis
   
   if (type == "nucleus") {
     G4int atomicNumber = particle->GetAtomicNumber();                     //particle atomic mumber
