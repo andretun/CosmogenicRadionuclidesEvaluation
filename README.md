@@ -1,5 +1,5 @@
 # CosmogenicRadionuclidesEvaluation
-CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in [this folder](/main/docs).
+CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in [this folder](/docs).
 It consists of a Geant4-based model for the evaluation of cosmogenic radionuclide activities in extraterrestrial bodies.
 
 In the following sections, a brief technical descriptio of the model is presented. For more details, please refer to the thesis above mentioned.
@@ -25,4 +25,4 @@ For a more detailed description of the method, see chapter 4.4.3 in the [thesis]
 
 
 ## Simulation result analysis
-The simulation produces root files consisting of histograms containing the radial distribution of the radionuclides. In order to get the radial distribution of the activities, a little further analysis is needed. This is pursued by the MATLAB code contained in this folder
+The simulation produces root files consisting of histograms containing the radial distribution of the radionuclides. In order to get the radial distribution of the activities, a little further analysis is needed. This is pursued by the MATLAB code contained in [this folder](/analysis), in which an example for ^{26}Al in Bennu can be found.
