@@ -1,5 +1,5 @@
 # CosmogenicRadionuclidesEvaluation
-CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in [this folder](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/docs).
+CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in [this folder](/main/docs).
 It consists of a Geant4-based model for the evaluation of cosmogenic radionuclide activities in extraterrestrial bodies.
 
 In the following sections, a brief technical descriptio of the model is presented. For more details, please refer to the thesis above mentioned.
@@ -8,7 +8,7 @@ In the following sections, a brief technical descriptio of the model is presente
 Cosmogenic radionuclides are the interaction (spallation, neutron capture, etc.) products of the hadronic component of cosmic rays impacting the interstellar matter. 
 Celestial bodies are exposed to both SCRs and GCRs, resulting in the production of several cosmogenic isotopes. The production rate of a nuclide depends on the fluxes of primary (cosmic ray) and secondary (product of the interaction of primaries in the matter) particle fluxes. The measurement of cosmogenic radionuclide activities reveals the exposure history of the body during a period of about three half-lives of the radioisotopes.
 
-In this work, a Geant4 model has been develop to evaluate the radionuclide production rates in spherical targets with a determined compositions.
+In this work, a Geant4 model has been developed to evaluate the radionuclide production rates in spherical targets with a determined compositions.
 
 
 ## The code
@@ -24,4 +24,5 @@ By assuming the secular equilibrium, such as the balance between production and 
 For a more detailed description of the method, see chapter 4.4.3 in the [thesis](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/docs).
 
 
-
+## Simulation result analysis
+The simulation produces root files consisting of histograms containing the radial distribution of the radionuclides. In order to get the radial distribution of the activities, a little further analysis is needed. This is pursued by the MATLAB code contained in this folder
