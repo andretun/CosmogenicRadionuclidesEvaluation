@@ -1,8 +1,11 @@
 # CosmogenicRadionuclidesEvaluation
-CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in [this folder](/docs).
+CosmogenicRadionuclidesEvaluation refers to the Master's Thesis in this [folder](/docs).
 It consists of a Geant4-based model for the evaluation of cosmogenic radionuclide activities in extraterrestrial bodies.
 
 In the following sections, a brief technical descriptio of the model is presented. For more details, please refer to the thesis above mentioned.
+
+For Geant4 for tutorials, please follow the instructions in the [Geant4 Official Page](https://geant4.web.cern.ch/).
+For a complete and detailed step-by-step Geant4 installation, this [youtue video series](https://www.youtube.com/watch?v=Lxb4WZyKeCE&list=PLLybgCU6QCGWgzNYOV0SKen9vqg4KXeVL&ab_channel=PhysicsMatters) represents a valid option.
 
 ## Overview
 Cosmogenic radionuclides are the interaction (spallation, neutron capture, etc.) products of the hadronic component of cosmic rays impacting the interstellar matter. 
@@ -21,7 +24,9 @@ The Shielding physics list has been selected to describe the radionuclides produ
 
 ## Radionuclide activity calculations
 By assuming the secular equilibrium, such as the balance between production and destruction of the radioisotopes, we can easily determine a nuclide activity by evaluating the production rate related to a certain GCR flux intensity.
-For a more detailed description of the method, see chapter 4.4.3 in the [thesis](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/docs).
+In the folder t
+
+For a more detailed description of the method, see chapter 4.4.3 in the [thesis](/docs).
 
 
 ## Simulation result analysis

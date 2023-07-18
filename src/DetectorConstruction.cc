@@ -1,3 +1,33 @@
+//
+// ********************************************************************
+// * License and Disclaimer                                           *
+// *                                                                  *
+// * The  Geant4 software  is  copyright of the Copyright Holders  of *
+// * the Geant4 Collaboration.  It is provided  under  the terms  and *
+// * conditions of the Geant4 Software License,  included in the file *
+// * LICENSE and available at  http://cern.ch/geant4/license .  These *
+// * include a list of copyright holders.                             *
+// *                                                                  *
+// * Neither the authors of this software system, nor their employing *
+// * institutes,nor the agencies providing financial support for this *
+// * work  make  any representation or  warranty, express or implied, *
+// * regarding  this  software system or assume any liability for its *
+// * use.  Please see the license in the file  LICENSE  and URL above *
+// * for the full disclaimer and the limitation of liability.         *
+// *                                                                  *
+// * This  code  implementation is the result of  the  scientific and *
+// * technical work of the GEANT4 collaboration.                      *
+// * By using,  copying,  modifying or  distributing the software (or *
+// * any work based  on the software)  you  agree  to acknowledge its *
+// * use  in  resulting  scientific  publications,  and indicate your *
+// * acceptance of all terms of the Geant4 Software license.          *
+// ********************************************************************
+//
+// Oct/2022  A. Antonione
+//
+/// \file DetectorConstruction.cc
+/// \brief Implementation of the DetectorConstruction class
+
 #include "DetectorConstruction.hh"
 #include "DetectorMessenger.hh"
 #include "G4Material.hh"
@@ -18,7 +48,6 @@
 #include "G4SystemOfUnits.hh"
 #include "G4PhysicalConstants.hh"
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 DetectorConstruction::DetectorConstruction()
 :G4VUserDetectorConstruction(),
@@ -31,21 +60,18 @@ DetectorConstruction::DetectorConstruction()
   fDetectorMessenger = new DetectorMessenger(this);
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 DetectorConstruction::~DetectorConstruction()
 {
   delete fDetectorMessenger;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
 {
   return ConstructVolumes();
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void DetectorConstruction::DefineMaterials()
 {
@@ -130,7 +156,6 @@ void DetectorConstruction::DefineMaterials()
  ///G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4Material* DetectorConstruction::MaterialWithSingleIsotope( G4String name,
                            G4String symbol, G4double density, G4int Z, G4int A)
@@ -150,7 +175,6 @@ G4Material* DetectorConstruction::MaterialWithSingleIsotope( G4String name,
   return material;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
 {
@@ -200,7 +224,6 @@ G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
   return fPWorld;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void DetectorConstruction::PrintParameters()
 {
@@ -209,7 +232,6 @@ void DetectorConstruction::PrintParameters()
          << "\n \n" << fMaterial << G4endl;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void DetectorConstruction::SetMaterial(G4String materialChoice)
 {
@@ -228,7 +250,6 @@ void DetectorConstruction::SetMaterial(G4String materialChoice)
   }              
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void DetectorConstruction::SetRadius(G4double value)
 {
@@ -236,7 +257,6 @@ void DetectorConstruction::SetRadius(G4double value)
   G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4double DetectorConstruction::GetVolume()
 {
@@ -244,6 +264,3 @@ G4double DetectorConstruction::GetVolume()
   volume = 4/3 * 3.14159 * fRadius*fRadius*fRadius;
   return volume;
 }
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-

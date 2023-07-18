@@ -12,7 +12,6 @@ A series of setter funtion is added in order to be able to dynamically change th
 in _HistoManager_, the histograms generated at the end of the simulation are defined, identified by a number and a name.
 Moreover, the number of bins and the x-axis span are also defined, but they can be modified with a [macro](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/macro).
 
-
 ## PrimaryGeneratorAction
 In _PrimaryGeneratorAction_, the default particle (cosmic ray) generated in the simulation is the proton.
 The wanted particle can be declared directly in this source file, or in a [macro](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/macro).
