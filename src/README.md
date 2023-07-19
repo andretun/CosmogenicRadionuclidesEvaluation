@@ -9,7 +9,7 @@ The celestial body is described as a spherical object of determined radius and c
 A series of setter funtion is added in order to be able to dynamically change the default feautres of the asteroid.
 
 ## HistoManager
-in _HistoManager_, the histograms generated at the end of the simulation are defined, identified by a number and a name.
+In _HistoManager_, the histograms generated at the end of the simulation are defined, identified by a number and a name.
 Moreover, the number of bins and the x-axis span are also defined, but they can be modified with a [macro](https://github.com/Tun98/CosmogenicRadionuclidesEvaluation/tree/main/macro).
 
 ## PrimaryGeneratorAction

@@ -28,6 +28,10 @@ In the folder t
 
 For a more detailed description of the method, see chapter 4.4.3 in the [thesis](/docs).
 
+### Energy spectrum generation
+Geant4 reads the energy spectrum of the particles in the form of binned histograms, as shown in the [macro folder](/macro).
+To generate the energy spectrum of the particle, use the MATLAB scripts for protons and alpha particles in the (energy_spectrum folder)(/energy_spectrum).
+
 
 ## Simulation result analysis
 The simulation produces root files consisting of histograms containing the radial distribution of the radionuclides. In order to get the radial distribution of the activities, a little further analysis is needed. This is pursued by the MATLAB code contained in [this folder](/analysis), in which an example for <sup>26</sup>Al in Bennu can be found.
