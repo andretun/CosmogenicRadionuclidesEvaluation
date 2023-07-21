@@ -30,7 +30,7 @@ For a more detailed description of the method, see chapter 4.4.3 in the [thesis]
 
 ### Energy spectrum generation
 Geant4 reads the energy spectrum of the particles in the form of binned histograms, as shown in the [macro folder](/macro).
-To generate the energy spectrum of the particle, use the MATLAB scripts for protons and alpha particles in the (energy_spectrum folder)(/energy_spectrum).
+To generate the energy spectrum of the particle, use the MATLAB scripts for protons and alpha particles in the [energy_spectrum folder](/energy_spectrum).
 
 
 ## Simulation result analysis
