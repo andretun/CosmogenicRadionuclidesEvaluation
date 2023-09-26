@@ -15,12 +15,12 @@ Jalpha = @(E) C*power(E, k)*(E + 2*m) / ( (E + 700) * (E + 2*m + 700) * power(E 
 integralFlux = integral(Jalpha, 0, inf, ArrayValued=true) % particles/(m2 sr s)
 NumberOfParticles = integralFlux*4*pi*pi*meteoriteRadius*meteoriteRadius % particles/s
 
-energy1 = 1:0.1:10; % MeV
-energy2 = 10.5:0.5:100; % MeV
-energy3 = 105:5:1000; % MeV
-energy4 = 1050:50:3000; % MeV
-energy5 = 3500:500:200000; % MeV
-energy = [energy1, energy2, energy3, energy4, energy5];
+energy1 = 1:0.5:100; % MeV
+energy2 = 105:5:1000; % MeV
+energy3 = 1050:50:3000; % MeV
+energy4 = 3500:500:215000; % MeV
+%energy5 = 3500:500:100000; % MeV
+energy = [energy1, energy2, energy3, energy4]; %, energy5];
 
 integralFlux = integral(Jalpha, energy(1), energy(end), ArrayValued=true) % particles/(m2 sr s)
 NumberOfParticles = integralFlux*4*pi*pi*meteoriteRadius*meteoriteRadius % particles/s

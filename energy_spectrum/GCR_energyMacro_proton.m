@@ -4,7 +4,7 @@ close all
 
 meteoriteRadius = 241; % m
 
-mp = 938.27208816; % MeV - rpton rest mass
+mp = 938.27208816; % MeV - proton rest mass
 A = 9.9e8; % m-2 s-1 MeV-1 sr-1
 x = @(E) 780*exp(-2.5e-4*E);
 phi = 660; % MeV - modulation parameter
